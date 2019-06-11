@@ -5,9 +5,16 @@ import './Hero.css';
 export default class BgVideo extends Component {
     render() {
         return (
+        <header class="video-header">
+            <div class="video-body">
             <video class="video-container" autoPlay loop muted>
                 <source src={backgroundvid} type='video/mp4' />
             </video>
+            </div>
+            <div class="overlay">
+                <h2>Akashic Systems</h2>
+            </div>
+        </header>
         )
     }
 }
