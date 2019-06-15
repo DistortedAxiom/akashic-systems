@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 .video-header{
     position: relative;
     display: flex;
-    align-items: center;
     color: white;
 }
 
 .hero-container {
     margin: auto;
-    text-align: center;
     position: relative;
 }
 
@@ -39,4 +39,10 @@
     left: 0;
     background: transparent;
     z-index: 1;
+}
+
+.overlay h1 {
+    color: white;
+    padding-top: 25%;
+    font-family: 'Leto', sans-serif;
 }

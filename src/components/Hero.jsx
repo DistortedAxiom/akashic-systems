@@ -12,7 +12,7 @@ export default class BgVideo extends Component {
             </video>
             </div>
             <div class="overlay">
-                <h2>Akashic Systems</h2>
+                <h1>Akashic Systems</h1>
             </div>
         </header>
         )
