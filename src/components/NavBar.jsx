@@ -7,13 +7,17 @@ export default class NavBar extends Component {
     render(){
         return (
         <div>
-            <Navbar expand="lg" bg="dark" variant="dark">
-                 <Navbar.Brand href="#home">Akashic Systems</Navbar.Brand>
-                 <Nav className="mr-auto">
-                    <Nav.Link href="#about">About</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                 </Nav>
-            </Navbar>
+           <nav className="navbar navbar-expand-lg navbar-light bg-light">
+               <Link className="navbar-brand" to="/">Home</Link>
+               <ul className="navbar-nav">
+                   <li className="nav-item">
+                       <Link className="nav-link" to="/about">About</Link>
+                   </li>
+                   <li className="nav-item">
+                        <Link className="nav-link" to="/features">Features</Link>
+                    </li>
+               </ul>
+           </nav>
         </div>
         )
     }
