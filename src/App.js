@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
-import BgVideo from './components/Hero';
+import Home from './pages/Home';
 import Features from './pages/Features';
 import About from './pages/About';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
@@ -20,12 +20,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-);
-
 
 export default App;
