@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Features from './pages/Features';
 import About from './pages/About';
+import Main from './pages/mainpage/MainPage';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/" component={Home} exact/>
+          <Route path="/home" comonent={Main} />
           <Route path="/about" component={About} />
           <Route path="/features" component={Features} />
         </Switch>

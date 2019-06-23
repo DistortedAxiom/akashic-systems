@@ -1,10 +1,9 @@
 import React from 'react';
-import '../App.css';
 
-function About(){
+function Main(){
     return (
         <div>
-            <h1>About</h1>
+            <h1>Testing</h1>
             <p>
                 Soon to be...
             </p>
@@ -12,4 +11,4 @@ function About(){
     )
 }
 
-export default About;
+export default Main;
