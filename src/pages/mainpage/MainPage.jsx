@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Main(){
+function MainPage(){
     return (
         <div>
             <h1>Testing</h1>
@@ -11,4 +11,4 @@ function Main(){
     )
 }
 
-export default Main;
+export default MainPage;

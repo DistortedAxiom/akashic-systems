@@ -16,9 +16,11 @@ export default class BgVideo extends Component {
             </div>
             <div class="overlay">
                 <h1>Akashic Systems</h1>
-            </div>
-            <div>
-                <Link classname="mainpage-link">Start</Link> 
+                <Link classname="mainpage-link" to="home">
+                    <button type="button">
+                        Start
+                    </button>
+                </Link>  
             </div>
         </header>
         )
