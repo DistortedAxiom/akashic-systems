@@ -9,6 +9,7 @@
 .hero-container {
     margin: auto;
     position: relative;
+    overflow: hidden;
 }
 
 .video-body {
@@ -39,6 +40,7 @@
     left: 0;
     background: transparent;
     z-index: 1;
+    overflow: hidden;
 }
 
 .overlay h1 {
