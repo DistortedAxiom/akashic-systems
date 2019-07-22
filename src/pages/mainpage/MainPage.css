@@ -10,5 +10,6 @@
 
 .plot-div {
   align-items: stretch;
-
+  width: 100%;
+  height: 100%;
 }
