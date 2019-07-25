@@ -1,5 +1,4 @@
 import React from 'react';
-import Plot from 'react-plotly.js';
 import SideBar from './main_components/sidebar';
 import './MainPage.css';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
