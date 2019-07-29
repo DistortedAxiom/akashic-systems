@@ -45,28 +45,26 @@ export default class Plotly2 extends React.Component {
 
   render() {
 
-    let main_data = this.state.data;
     console.log(this.state.x_array);
     console.log(this.state.y_array);
 
 
     var trace1 = {
-      x: ['giraffes', 'orangutans', 'monkeys'],
-      y: [20, 14, 23],
-      name: 'SF Zoo',
-      type: 'bar'
+      type: "scatter",
+      mode: "lines",
+      name: 'AAPL High',
+      x: this.state.x_array,
+      y: this.state.y_array,
+      line: {color: '#17BECF'}
     };
     
-    var trace2 = {
-      x: ['giraffes', 'orangutans', 'monkeys'],
-      y: [12, 18, 29],
-      name: 'LA Zoo',
-      type: 'bar'
+    
+    
+    var data = [trace1];
+    
+    var layout = {
+      title: "Basic Time Series"
     };
-    
-    var data = [trace1, trace2];
-    
-    var layout = {barmode: 'group'};
 
     return (
       <Plot
