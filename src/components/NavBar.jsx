@@ -8,8 +8,11 @@ export default class NavBar extends Component {
         return (
         <div>
            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-               <Link className="navbar-brand" to="/">Home</Link>
+               <Link className="navbar-brand" to="/">Akashic Systems</Link>
                <ul className="navbar-nav">
+                   <li className="nav-item">
+                       <Link className="nav-link" to="/home">Home</Link>
+                   </li>
                    <li className="nav-item">
                        <Link className="nav-link" to="/about">About</Link>
                    </li>

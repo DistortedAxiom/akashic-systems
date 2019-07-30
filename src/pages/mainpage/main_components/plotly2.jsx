@@ -1,6 +1,5 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import { PassThrough } from 'stream';
 
 export default class Plotly2 extends React.Component {
 
@@ -45,10 +44,6 @@ export default class Plotly2 extends React.Component {
 
   render() {
 
-    console.log(this.state.x_array);
-    console.log(this.state.y_array);
-
-
     var trace1 = {
       type: "scatter",
       mode: "lines",
@@ -57,9 +52,7 @@ export default class Plotly2 extends React.Component {
       y: this.state.y_array,
       line: {color: '#17BECF'}
     };
-    
-    
-    
+
     var data = [trace1];
     
     var layout = {

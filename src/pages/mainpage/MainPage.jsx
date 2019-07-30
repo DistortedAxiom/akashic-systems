@@ -7,36 +7,37 @@ import Plotly2 from './main_components/plotly2';
 
 // Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import { PassThrough } from 'stream';
 
 export default class MainPage extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handlePlotChange = this.handlePlotChange.bind(this);
-        this.handlePlotReturn = this.handlePlotReturn.bind(this);
+        this.setHome = this.setHome.bind(this);
+        this.setDemographic = this.setDemographic.bind(this);
         this.state = {
-            plot1: true
+            component_state: "home"
         }
     }
 
-    handlePlotChange() {
-        this.setState({plot1: false});
+    setHome() {
+        this.setState({component_state: "home"});
     }
 
-    handlePlotReturn() {
-        this.setState({plot1: true});
+    setDemographic() {
+        this.setState({component_state: "demographic"});
     }
 
     render() {
-        const plot1 = this.state.plot1;
-        let plot;
+        const current_component = this.state.component_state;
+        let page_component;
 
-        if  (plot1) {
-            plot = <Plotly />
-        }
-
-        else {
-            plot = <Plotly2 />
+        switch(current_component) {
+            case ("demographic"):
+                page_component = <Plotly2 />
+                break;
+            default:
+                page_component = <Plotly />
         }
 
     return (
@@ -48,27 +49,27 @@ export default class MainPage extends React.Component {
 >
     <SideNav.Toggle />
     <SideNav.Nav defaultSelected="home">
-        <NavItem eventKey="home" onClick={this.handlePlotReturn}>
+        <NavItem eventKey="home" onClick={this.setHome}>
             <NavIcon>
                 <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em',}} />
             </NavIcon>
             <NavText>
-                Plot 1
+                Home
             </NavText>
         </NavItem>
-        <NavItem eventKey="plot2" onClick={this.handlePlotChange}>
+        <NavItem eventKey="plot2" onClick={this.setDemographic}>
             <NavIcon>
                 <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em',}} />
             </NavIcon>
             <NavText>
-                Plot 2
+                Demographics
             </NavText>
         </NavItem>
         
     </SideNav.Nav>
 </SideNav>
       <div className="plot-div">
-      {plot}
+      {page_component}
       </div>
     </div>
     );
